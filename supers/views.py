@@ -9,7 +9,7 @@ from supers import serializers
 # Create your views here.
 
 
-@api_view(['GET', 'PUT'])
+@api_view(['GET', 'PUT', 'Delete'])
 def get_super_by_id(request, pk):
     super = get_object_or_404(Super, pk=pk)
     if request.method == 'GET':
@@ -19,8 +19,12 @@ def get_super_by_id(request, pk):
         serializer = SuperSerializer(super, data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
-        return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
-   
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    elif request.method == 'DELETE':
+        super.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+        
 @api_view(['POST'])
 def create_super(request):
     if request.method == 'POST':
@@ -39,7 +43,5 @@ def create_super(request):
 #         # serializer.save()
 #         return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
 
-#     elif request.method == 'DELETE':
-#         product.delete()
-#         return Response(status=status.HTTP_204_NO_CONTENT)
+
 
