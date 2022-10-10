@@ -46,10 +46,10 @@ Finds the super in the Super table and updates that super with the properties th
 Returns a 200 status code. 
 Responds with the newly updated super object.  -->
  
-(/5 points) As a developer, I want to create a DELETE endpoint that does the following things: 
+<!-- (/5 points) As a developer, I want to create a DELETE endpoint that does the following things: 
 Accepts a value from the request’s URL. 
 Deletes the correct super from the database 
-Returns a 204 status code (NO CONTENT). 
+Returns a 204 status code (NO CONTENT).  -->
  
 (/10 points) As a developer, I want to create a GET endpoint that responds with a 200 success status code and all of the supers within the supers table. 
 This view function should be implemented in a way to accept a “type” parameter 

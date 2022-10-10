@@ -25,9 +25,20 @@ def get_super_by_id(request, pk):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
         
-@api_view(['POST'])
+@api_view(['GET','POST'])
 def create_super(request):
-    if request.method == 'POST':
+    if request.method == 'GET':
+
+        super_type = request.query_params.get('type')
+
+        products = Super.objects.all()
+
+        if super_type:
+            products = products.filter(super_type__type=super_type)
+
+        serializer = SuperSerializer(products, many=True)
+        return Response(serializer.data)
+    elif request.method == 'POST':
         serializer = SuperSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
@@ -42,6 +53,8 @@ def create_super(request):
 #         # serializer.is_valid(raise_exception=True)
 #         # serializer.save()
 #         return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
+
+
 
 
 
