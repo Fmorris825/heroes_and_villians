@@ -51,11 +51,11 @@ Accepts a value from the request’s URL.
 Deletes the correct super from the database 
 Returns a 204 status code (NO CONTENT).  -->
  
-(/10 points) As a developer, I want to create a GET endpoint that responds with a 200 success status code and all of the supers within the supers table. 
+<!-- (/10 points) As a developer, I want to create a GET endpoint that responds with a 200 success status code and all of the supers within the supers table. 
 This view function should be implemented in a way to accept a “type” parameter 
 Example: " http://127.0.0.1:8000/api/supers?type=hero” 
 If a type query parameter is sent to the view function with the value of “hero”, the view function response should be a list of all supers that are associated with the type of “Hero” (Shown in End Result Overview video on portal) 
-If a type query parameter is sent to the view function with the value of “villain”, the view function response should be a list of all supers that are associated with the type of “Villain” (Shown in End Result Overview video on portal) 
+If a type query parameter is sent to the view function with the value of “villain”, the view function response should be a list of all supers that are associated with the type of “Villain” (Shown in End Result Overview video on portal)  -->
  
  
  
