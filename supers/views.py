@@ -31,12 +31,12 @@ def create_super(request):
 
         super_type = request.query_params.get('type')
 
-        products = Super.objects.all()
+        supers = Super.objects.all().order_by('super_type')
 
         if super_type:
-            products = products.filter(super_type__type=super_type)
+            supers = supers.filter(super_type__type=super_type)
 
-        serializer = SuperSerializer(products, many=True)
+        serializer = SuperSerializer(supers, many=True)
         return Response(serializer.data)
     elif request.method == 'POST':
         serializer = SuperSerializer(data=request.data)
