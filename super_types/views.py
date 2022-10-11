@@ -14,9 +14,6 @@ from super_types import serializers
 def get_super_types(request):
     if request.method == 'GET':
         super_types = SuperType.objects.all()
-        # for supers in super_types:
-        #     supers = Super.objects.filter(super_type__type=super_types)
-        #     return supers
         serializer = SuperTypeSerializer(super_types, many=True)
         return Response(serializer.data)
     elif request.method == 'POST':

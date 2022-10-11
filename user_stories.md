@@ -2,8 +2,8 @@ Main Stories
  
 <!-- (/2.5 points) As a developer, I want to make good, consistent commits.   -->
 
-(/2.5 points) As a developer, I want to create an ERD with two tables - Super and SuperType. 
-The two tables should show all of the correct properties for both entities as well as the correct relationship between the two tables
+<!-- (/2.5 points) As a developer, I want to create an ERD with two tables - Super and SuperType. 
+The two tables should show all of the correct properties for both entities as well as the correct relationship between the two tables -->
  
 <!-- (/2.5 points) As a developer, I want to create a SuperType model in a “super_types” app. 
 Property names must be in snake_case and match the following exactly! 
@@ -23,11 +23,11 @@ secondary_ability – CharField
 catchphrase – CharField 
 super_type – ForeignKey  -->
  
-(/2.5 points) As a developer, I want my API to serve the “supers” app’s content on the following urls paths: 
+<!-- (/2.5 points) As a developer, I want my API to serve the “supers” app’s content on the following urls paths: 
 Paths must match these exactly! 
 ‘127.0.0.1:8000/api/supers/' - optional params 
 ‘127.0.0.1:8000/api/supers/<int:pk>/’ 
- 
+  -->
 <!-- (/5 points) As a developer, I want to create a GET by id endpoint that does the following things: 
 Accepts a value from the request’s URL (The id of the super to retrieve). 
 Returns a 200 status code. 
